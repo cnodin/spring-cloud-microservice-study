@@ -7,6 +7,46 @@
     <groupId>org.pollux.spring.cloud.microservice.study</groupId>
     <artifactId>spring-cloud-microservice.study</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>microservice-discovery-eureka</module>
+        <module>microservice-provider-user</module>
+        <module>microservice-consumer-movie-ribbon</module>
+        <module>microservice-api-gateway</module>
+        <module>microservice-consumer-movie-ribbon-with-hystrix</module>
+        <module>microservice-hystrix-dashboard</module>
+    </modules>
+    <packaging>pom</packaging>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.4.1.RELEASE</version>
+    </parent>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Camden.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
