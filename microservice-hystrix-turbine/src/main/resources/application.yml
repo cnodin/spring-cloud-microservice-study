@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: microservice-hystrix-turbine
+server:
+  port: 8031
+security:
+  basic:
+    enabled: false
+turbine:
+  aggretator:
+    clusterConfig: default
+  appConfig: MICROSERVICE-CONSUMER-MOVIE-RIBBON,MICROSERVICE-CONSUMER-MOVIE-RIBBON-WITH-HYSTRIX,
+    MICROSERVICE-PROVIDER-USERSERVICE
+  clusterNameExpression: new String("default")
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
