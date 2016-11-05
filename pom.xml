@@ -15,12 +15,13 @@
         <module>microservice-consumer-movie-ribbon-with-hystrix</module>
         <module>microservice-hystrix-dashboard</module>
         <module>microservice-hystrix-turbine</module>
-        <module>microservice-hystrix-turbine</module>
         <module>microservice-config-server</module>
         <module>microservice-config-client</module>
         <module>microservice-config-client-eureka</module>
         <module>microservice-config-server-eureka</module>
         <module>microservice-cloud-bus-kafka</module>
+        <module>microservice-cloud-sleuth</module>
+        <module>microservice-zipkin-server</module>
     </modules>
     <packaging>pom</packaging>
 
